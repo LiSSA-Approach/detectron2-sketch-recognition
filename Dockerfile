@@ -4,7 +4,7 @@ WORKDIR /usr/local/src/sketch
 RUN apt-get update && apt-get install wget ffmpeg libsm6 libxext6 -y
 
 ARG DOWNLOAD_MODEL_PATH
-RUN mkdir models && wget -qO models/model_final.pth $DOWNLOAD_MODEL_PATH
+RUN mkdir model && wget -qO model/model_final.pth $DOWNLOAD_MODEL_PATH
 
 COPY requirements.txt .
 RUN python -m pip install -r requirements.txt
