@@ -1,0 +1,10 @@
+# Webserver
+flask==2.1.2
+flask_restx==0.5.1
+waitress==2.1.1
+
+# Sketch Recognition
+opencv-python
+torch==1.9.1
+torchvision==0.10.1
+# pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cpu/torch1.9/index.html
