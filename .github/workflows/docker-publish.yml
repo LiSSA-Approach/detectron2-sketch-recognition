@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME --build-arg DOWNLOAD_MODEL_PATH=${{ secrets.DOWNLOAD_MODEL_PATH }}
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME --build-arg DOWNLOAD_MODEL_PATH='${{ secrets.DOWNLOAD_MODEL_PATH }}'
 
       - name: Log into registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.repository_owner }} --password-stdin
